@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/NFTManager/">
+    <file alias="Main.qml">/home/cashtan/QtProjects/NFTManager/NFTManager/Main.qml</file>
+  </qresource>
+</RCC>
+

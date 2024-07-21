@@ -1,0 +1,5 @@
+module NFTManager
+typeinfo appNFTManager.qmltypes
+prefer :/NFTManager/
+Main 1.0 Main.qml
+
