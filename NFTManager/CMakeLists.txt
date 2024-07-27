@@ -20,6 +20,8 @@ qt_add_qml_module(appNFTManager
         SOURCES Global.h Global.cpp
         QML_FILES CustomTabButton.qml
         QML_FILES FeatureWindow.qml
+        SOURCES Controller.h Controller.cpp
+        SOURCES NFTables.h NFTables.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

@@ -14,7 +14,7 @@ Global::Global(QObject *parent)
     setAppMinHeight(200);
     setSelectionBarHeight(50);
     setFontSize1(18);
-    setFontSize2(24);
+    setFontSize2(22);
     setFeaturesCount(7);
 }
 

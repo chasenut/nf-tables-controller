@@ -16,19 +16,6 @@ Window {
     minimumWidth: Global.appMinWidth
     minimumHeight: Global.appMinHeight
 
-    Window {
-        id: test
-        width: 200
-        height: 200
-        title: qsTr("test")
-        visible: true
-        opacity: bma.containsMouse ? 0 : 1
-       MouseArea{
-            id: bma
-           anchors.fill: parent
-       }
-    }
-
     Column {
 
         anchors {

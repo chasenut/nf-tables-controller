@@ -1,0 +1,14 @@
+#ifndef NFTABLES_H
+#define NFTABLES_H
+
+#include <QObject>
+#include <vector>
+#include <s
+
+class NFTables
+{
+public:
+    NFTables();
+};
+
+#endif // NFTABLES_H

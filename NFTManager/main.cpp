@@ -1,6 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include "Global.h"
+#include "Controller.h"
 
 /// enable nftables
 // sudo systemctl enable nftables
@@ -10,8 +11,11 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    Global global(&app);
-    qmlRegisterSingletonInstance("app.Global", 1, 0, "Global", &global);
+    Global *global = new Global(&app);
+    Controller *controller = new Controller(&app);
+    qmlRegisterSingletonInstance("app.Global", 1, 0, "Global", global);
+    qmlRegisterSingletonInstance("app.Controller", 1, 0, "Controller", controller);
+
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/NFTManager/Main.qml"));
