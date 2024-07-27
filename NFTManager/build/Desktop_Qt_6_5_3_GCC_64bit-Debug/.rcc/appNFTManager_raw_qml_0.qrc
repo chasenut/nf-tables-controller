@@ -1,8 +1,0 @@
-<RCC>
-  <qresource prefix="/NFTManager/">
-    <file alias="Main.qml">/home/cashtan/QtProjects/NFTManager/NFTManager/Main.qml</file>
-    <file alias="CustomTabButton.qml">/home/cashtan/QtProjects/NFTManager/NFTManager/CustomTabButton.qml</file>
-    <file alias="FeatureWindow.qml">/home/cashtan/QtProjects/NFTManager/NFTManager/FeatureWindow.qml</file>
-  </qresource>
-</RCC>
-
