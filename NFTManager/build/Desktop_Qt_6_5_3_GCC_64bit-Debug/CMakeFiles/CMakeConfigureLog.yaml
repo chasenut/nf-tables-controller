@@ -39,8 +39,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Xo4ZmM"
-      binary: "/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Xo4ZmM"
+      source: "/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Go5uuT"
+      binary: "/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Go5uuT"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
@@ -51,10 +51,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Xo4ZmM'
+        Change Dir: '/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Go5uuT'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_8ff35
-        [1/2] /usr/bin/clang++   -DQT_QML_DEBUG  -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o -c /home/cashtan/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/ninja -v cmTC_3762c
+        [1/2] /usr/bin/clang++   -DQT_QML_DEBUG  -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o -c /home/cashtan/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
         Ubuntu clang version 18.1.3 (1ubuntu1)
         Target: x86_64-pc-linux-gnu
         Thread model: posix
@@ -64,7 +64,7 @@ events:
         Candidate multilib: .;@m64
         Selected multilib: .;@m64
          (in-process)
-         "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Xo4ZmM -v -fcoverage-compilation-dir=/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Xo4ZmM -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D QT_QML_DEBUG -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/cashtan/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
+         "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Go5uuT -v -fcoverage-compilation-dir=/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Go5uuT -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D QT_QML_DEBUG -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/cashtan/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 18.1.3 based upon LLVM 18.1.3 default target x86_64-pc-linux-gnu
         ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
         ignoring nonexistent directory "/include"
@@ -78,7 +78,7 @@ events:
          /usr/include/x86_64-linux-gnu
          /usr/include
         End of search list.
-        [2/2] : && /usr/bin/clang++ -DQT_QML_DEBUG -v -Wl,-v CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8ff35   && :
+        [2/2] : && /usr/bin/clang++ -DQT_QML_DEBUG -v -Wl,-v CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_3762c   && :
         Ubuntu clang version 18.1.3 (1ubuntu1)
         Target: x86_64-pc-linux-gnu
         Thread model: posix
@@ -87,7 +87,7 @@ events:
         Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/13
         Candidate multilib: .;@m64
         Selected multilib: .;@m64
-         "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_8ff35 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/13 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/13/crtendS.o /lib/x86_64-linux-gnu/crtn.o
+         "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_3762c /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/13 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/13/crtendS.o /lib/x86_64-linux-gnu/crtn.o
         GNU ld (GNU Binutils for Ubuntu) 2.42
         
       exitCode: 0
@@ -129,10 +129,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Xo4ZmM']
+        ignore line: [Change Dir: '/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Go5uuT']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_8ff35]
-        ignore line: [[1/2] /usr/bin/clang++   -DQT_QML_DEBUG  -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o -c /home/cashtan/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_3762c]
+        ignore line: [[1/2] /usr/bin/clang++   -DQT_QML_DEBUG  -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o -c /home/cashtan/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Ubuntu clang version 18.1.3 (1ubuntu1)]
         ignore line: [Target: x86_64-pc-linux-gnu]
         ignore line: [Thread model: posix]
@@ -144,7 +144,7 @@ events:
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
         ignore line: [ (in-process)]
-        ignore line: [ "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Xo4ZmM -v -fcoverage-compilation-dir=/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Xo4ZmM -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D QT_QML_DEBUG -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/cashtan/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/usr/lib/llvm-18/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Go5uuT -v -fcoverage-compilation-dir=/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-Go5uuT -resource-dir /usr/lib/llvm-18/lib/clang/18 -dependency-file CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D QT_QML_DEBUG -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /usr/lib/llvm-18/lib/clang/18/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/cashtan/Qt/Tools/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 18.1.3 based upon LLVM 18.1.3 default target x86_64-pc-linux-gnu]
         ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
         ignore line: [ignoring nonexistent directory "/include"]
@@ -158,7 +158,7 @@ events:
         ignore line: [ /usr/include/x86_64-linux-gnu]
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /usr/bin/clang++ -DQT_QML_DEBUG -v -Wl -v CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8ff35   && :]
+        ignore line: [[2/2] : && /usr/bin/clang++ -DQT_QML_DEBUG -v -Wl -v CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_3762c   && :]
         ignore line: [Ubuntu clang version 18.1.3 (1ubuntu1)]
         ignore line: [Target: x86_64-pc-linux-gnu]
         ignore line: [Thread model: posix]
@@ -169,7 +169,7 @@ events:
         ignore line: [@m64]
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
-        link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_8ff35 /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/13 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/13/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
+        link line: [ "/usr/bin/ld" -z relro --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -pie -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_3762c /lib/x86_64-linux-gnu/Scrt1.o /lib/x86_64-linux-gnu/crti.o /usr/bin/../lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/bin/../lib/gcc/x86_64-linux-gnu/13 -L/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-linux-gnu/13/crtendS.o /lib/x86_64-linux-gnu/crtn.o]
           arg [/usr/bin/ld] ==> ignore
           arg [-zrelro] ==> ignore
           arg [--hash-style=gnu] ==> ignore
@@ -181,7 +181,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_8ff35] ==> ignore
+          arg [cmTC_3762c] ==> ignore
           arg [/lib/x86_64-linux-gnu/Scrt1.o] ==> obj [/lib/x86_64-linux-gnu/Scrt1.o]
           arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
           arg [/usr/bin/../lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/bin/../lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
@@ -194,7 +194,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_8ff35.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_3762c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -246,8 +246,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-WdgYlP"
-      binary: "/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-WdgYlP"
+      source: "/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-P4ZFa7"
+      binary: "/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-P4ZFa7"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
@@ -258,11 +258,11 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-WdgYlP'
+        Change Dir: '/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-P4ZFa7'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_3d94d
-        [1/2] /usr/bin/clang++ -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG  -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_3d94d.dir/src.cxx.o -MF CMakeFiles/cmTC_3d94d.dir/src.cxx.o.d -o CMakeFiles/cmTC_3d94d.dir/src.cxx.o -c /home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-WdgYlP/src.cxx
-        [2/2] : && /usr/bin/clang++ -DQT_QML_DEBUG  CMakeFiles/cmTC_3d94d.dir/src.cxx.o -o cmTC_3d94d   && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_53ae8
+        [1/2] /usr/bin/clang++ -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG  -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_53ae8.dir/src.cxx.o -MF CMakeFiles/cmTC_53ae8.dir/src.cxx.o.d -o CMakeFiles/cmTC_53ae8.dir/src.cxx.o -c /home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-P4ZFa7/src.cxx
+        [2/2] : && /usr/bin/clang++ -DQT_QML_DEBUG  CMakeFiles/cmTC_53ae8.dir/src.cxx.o -o cmTC_53ae8   && :
         
       exitCode: 0
   -
@@ -284,8 +284,8 @@ events:
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-FINS10"
-      binary: "/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-FINS10"
+      source: "/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-pIE7U1"
+      binary: "/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-pIE7U1"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
       CMAKE_CXX_FLAGS: "-DQT_QML_DEBUG"
@@ -296,11 +296,11 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: '/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-FINS10'
+        Change Dir: '/home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-pIE7U1'
         
-        Run Build Command(s): /usr/bin/ninja -v cmTC_c0122
-        [1/2] /usr/bin/clang++ -DHAVE_STDATOMIC  -DQT_QML_DEBUG  -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_c0122.dir/src.cxx.o -MF CMakeFiles/cmTC_c0122.dir/src.cxx.o.d -o CMakeFiles/cmTC_c0122.dir/src.cxx.o -c /home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-FINS10/src.cxx
-        [2/2] : && /usr/bin/clang++ -DQT_QML_DEBUG  CMakeFiles/cmTC_c0122.dir/src.cxx.o -o cmTC_c0122   && :
+        Run Build Command(s): /usr/bin/ninja -v cmTC_fa9b2
+        [1/2] /usr/bin/clang++ -DHAVE_STDATOMIC  -DQT_QML_DEBUG  -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_fa9b2.dir/src.cxx.o -MF CMakeFiles/cmTC_fa9b2.dir/src.cxx.o.d -o CMakeFiles/cmTC_fa9b2.dir/src.cxx.o -c /home/cashtan/QtProjects/NFTManager/NFTManager/build/Desktop_Qt_6_5_3_GCC_64bit-Debug/CMakeFiles/CMakeScratch/TryCompile-pIE7U1/src.cxx
+        [2/2] : && /usr/bin/clang++ -DQT_QML_DEBUG  CMakeFiles/cmTC_fa9b2.dir/src.cxx.o -o cmTC_fa9b2   && :
         
       exitCode: 0
 ...

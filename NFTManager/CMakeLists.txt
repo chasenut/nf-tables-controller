@@ -17,6 +17,9 @@ qt_add_qml_module(appNFTManager
     VERSION 1.0
     QML_FILES
         Main.qml
+        SOURCES Global.h Global.cpp
+        QML_FILES CustomTabButton.qml
+        QML_FILES FeatureWindow.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

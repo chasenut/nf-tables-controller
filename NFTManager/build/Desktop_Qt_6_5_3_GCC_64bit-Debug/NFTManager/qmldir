@@ -2,4 +2,6 @@ module NFTManager
 typeinfo appNFTManager.qmltypes
 prefer :/NFTManager/
 Main 1.0 Main.qml
+CustomTabButton 1.0 CustomTabButton.qml
+FeatureWindow 1.0 FeatureWindow.qml
 
