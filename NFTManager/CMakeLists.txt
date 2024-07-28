@@ -4,7 +4,7 @@ project(NFTManager VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
+find_package(Qt6 6.4 REQUIRED COMPONENTS Quick Widgets)
 
 qt_standard_project_setup()
 
@@ -22,6 +22,7 @@ qt_add_qml_module(appNFTManager
         QML_FILES FeatureWindow.qml
         SOURCES Controller.h Controller.cpp
         SOURCES NFTables.h NFTables.cpp
+        QML_FILES CustomButton.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -36,7 +37,7 @@ set_target_properties(appNFTManager PROPERTIES
 )
 
 target_link_libraries(appNFTManager
-    PRIVATE Qt6::Quick
+    PRIVATE Qt6::Quick Qt6::Widgets
 )
 
 include(GNUInstallDirs)

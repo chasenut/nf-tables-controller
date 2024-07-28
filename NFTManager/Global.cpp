@@ -8,13 +8,17 @@ Global::Global(QObject *parent)
     setColor_bg1(QColor(40, 40, 40));
     setColor_bg2(QColor(30, 30, 30));
     setColor_text1(QColor(255, 255, 255));
+    setColor_text2(QColor(175, 175, 175));
     setAppWidth(1200);
     setAppHeight(700);
-    setAppMinWidth(200);
-    setAppMinHeight(200);
-    setSelectionBarHeight(50);
+    setAppMinWidth(700);
+    setAppMinHeight(500);
+    setSelectionBarHeight(55);
     setFontSize1(18);
     setFontSize2(22);
+    setFontSize3(26);
+    setFontSize4(30);
+    setFontSize5(34);
     setFeaturesCount(7);
 }
 
@@ -185,4 +189,56 @@ void Global::setColor_text1(const QColor &newColor_text1)
         return;
     m_color_text1 = newColor_text1;
     emit color_text1Changed();
+}
+
+QColor Global::color_text2() const
+{
+    return m_color_text2;
+}
+
+void Global::setColor_text2(const QColor &newColor_text2)
+{
+    if (m_color_text2 == newColor_text2)
+        return;
+    m_color_text2 = newColor_text2;
+    emit color_text2Changed();
+}
+
+int Global::fontSize3() const
+{
+    return m_fontSize3;
+}
+
+void Global::setFontSize3(int newFontSize3)
+{
+    if (m_fontSize3 == newFontSize3)
+        return;
+    m_fontSize3 = newFontSize3;
+    emit fontSize3Changed();
+}
+
+int Global::fontSize4() const
+{
+    return m_fontSize4;
+}
+
+void Global::setFontSize4(int newFontSize4)
+{
+    if (m_fontSize4 == newFontSize4)
+        return;
+    m_fontSize4 = newFontSize4;
+    emit fontSize4Changed();
+}
+
+int Global::fontSize5() const
+{
+    return m_fontSize5;
+}
+
+void Global::setFontSize5(int newFontSize5)
+{
+    if (m_fontSize5 == newFontSize5)
+        return;
+    m_fontSize5 = newFontSize5;
+    emit fontSize5Changed();
 }

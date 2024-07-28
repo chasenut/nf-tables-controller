@@ -12,17 +12,19 @@ TabButton {
 
     contentItem: Text{
         text: parent.text
-        color: Global.color_text1
-        font.pixelSize: stackLayoutItem.currentIndex === parent.selfIndex ? Global.fontSize2 : Global.fontSize1
+        color: stackLayoutItem.currentIndex === parent.selfIndex ? Global.color_text1 : Global.color_text2
+        font.pixelSize: Global.fontSize1
         font.bold: stackLayoutItem.currentIndex === parent.selfIndex ? true : false
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         elide: Text.ElideRight
+        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
     }
     background: Rectangle {
         color: stackLayoutItem.currentIndex === parent.selfIndex ? Global.color_bg1 : Global.color_bg2
     }
     height: parent.height
+
     anchors {
         top: parent.top
         bottom: parent.bottom

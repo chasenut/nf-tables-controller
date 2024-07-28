@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include "Global.h"
 #include "Controller.h"
+#include <QtWidgets/qapplication.h>
 
 /// enable nftables
 // sudo systemctl enable nftables
@@ -9,7 +10,8 @@
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication app(argc, argv);
+    //QGuiApplication app(argc, argv);
+    QApplication app(argc, argv);
 
     Global *global = new Global(&app);
     Controller *controller = new Controller(&app);

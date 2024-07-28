@@ -13,6 +13,7 @@ class Global : public QObject
     Q_PROPERTY(QColor color_bg1 READ color_bg1 WRITE setColor_bg1 NOTIFY color_bg1Changed FINAL)
     Q_PROPERTY(QColor color_bg2 READ color_bg2 WRITE setColor_bg2 NOTIFY color_bg2Changed FINAL)
     Q_PROPERTY(QColor color_text1 READ color_text1 WRITE setColor_text1 NOTIFY color_text1Changed FINAL)
+    Q_PROPERTY(QColor color_text2 READ color_text2 WRITE setColor_text2 NOTIFY color_text2Changed FINAL)
 
     Q_PROPERTY(int appWidth READ appWidth WRITE setAppWidth NOTIFY appWidthChanged FINAL)
     Q_PROPERTY(int appHeight READ appHeight WRITE setAppHeight NOTIFY appHeightChanged FINAL)
@@ -21,6 +22,10 @@ class Global : public QObject
     Q_PROPERTY(int selectionBarHeight READ selectionBarHeight WRITE setSelectionBarHeight NOTIFY selectionBarHeightChanged FINAL)
     Q_PROPERTY(int fontSize1 READ fontSize1 WRITE setFontSize1 NOTIFY fontSize1Changed FINAL)
     Q_PROPERTY(int fontSize2 READ fontSize2 WRITE setFontSize2 NOTIFY fontSize2Changed FINAL)
+    Q_PROPERTY(int fontSize3 READ fontSize3 WRITE setFontSize3 NOTIFY fontSize3Changed FINAL)
+    Q_PROPERTY(int fontSize4 READ fontSize4 WRITE setFontSize4 NOTIFY fontSize4Changed FINAL)
+    Q_PROPERTY(int fontSize5 READ fontSize5 WRITE setFontSize5 NOTIFY fontSize5Changed FINAL)
+
 
     Q_PROPERTY(int featuresCount READ featuresCount WRITE setFeaturesCount NOTIFY featuresCountChanged FINAL)
 public:
@@ -65,6 +70,18 @@ public:
     QColor color_text1() const;
     void setColor_text1(const QColor &newColor_text1);
 
+    QColor color_text2() const;
+    void setColor_text2(const QColor &newColor_text2);
+
+    int fontSize3() const;
+    void setFontSize3(int newFontSize3);
+
+    int fontSize4() const;
+    void setFontSize4(int newFontSize4);
+
+    int fontSize5() const;
+    void setFontSize5(int newFontSize5);
+
 signals:
     void color_bg1Changed();
 
@@ -92,6 +109,14 @@ signals:
 
     void color_text1Changed();
 
+    void color_text2Changed();
+
+    void fontSize3Changed();
+
+    void fontSize4Changed();
+
+    void fontSize5Changed();
+
 private:
     QColor m_color_bg1;
     QColor m_color_bg2;
@@ -106,6 +131,10 @@ private:
     int m_fontSize2;
     int m_featuresCount;
     QColor m_color_text1;
+    QColor m_color_text2;
+    int m_fontSize3;
+    int m_fontSize4;
+    int m_fontSize5;
 };
 
 #endif // GLOBAL_H
