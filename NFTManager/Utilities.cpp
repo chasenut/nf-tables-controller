@@ -13,8 +13,9 @@ void Utilities::resetNFTablesConfigFileToDefault()
     if (!outputFile.is_open())
     {
         std::cerr << "Failed to reset default NFTables config file (/etc/nftables.conf)!\n";
+        return;
     }
-    std::string defaultConfig =
+    const std::string defaultConfig =
         "#!/usr/sbin/nft -f\n\n"
         "flush ruleset\n\n"
         "table inet filter {\n"
@@ -105,4 +106,24 @@ void Utilities::removeContentFromFile(const std::string &filePath, const std::st
 
     outputFile << fileContent;
     outputFile.close();
+}
+
+bool Utilities::isIpAddressValid(const QString &input)
+{
+    std::string string = input.toStdString();
+    for (const auto& it : string)
+    {
+        if (!(std::isdigit(it) || it == '.'))
+        {
+            return false;
+        }
+    }
+    // for (char ch : string)
+    // {
+    //     if (!((ch >= 48 && ch <= 57) || ch == 46))
+    //     {
+    //         return false;
+    //     }
+    // }
+    return true;
 }

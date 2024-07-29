@@ -6,6 +6,7 @@
 #include <filesystem>
 #include <QTimer>
 #include <string>
+#include <algorithm>
 
 std::string const NFTables::NFTConfigPath = "/etc/nftables.conf";
 
@@ -21,12 +22,16 @@ TcpUdpCount NFTables::getTcpUdpCounters()
 
     std::ifstream file(filePath);
     if (!file.is_open())
+    {
         qDebug() << "[ERROR] Failed to read and write tcp/udp counters data!";
+        return {0, 0};
+    }
 
     std::string line;
     while (std::getline(file, line))
         output += QString::fromStdString(line);
 
+    file.close();
     std::filesystem::remove(filePath);
     cleanupTcpUdpNFTables();
 
@@ -77,7 +82,7 @@ void NFTables::reloadNFT()
 int NFTables::extractCounterValue(const QString &output, const QString &counterName)
 {
     QStringList lines = output.split('\n');
-    for (const QString& line : lines)
+    for (const auto& line : lines)
     {
         if (line.contains(counterName))
         {
@@ -89,6 +94,12 @@ int NFTables::extractCounterValue(const QString &output, const QString &counterN
                     return words[i + 2].toInt();
                 }
             }
+            // std::string napis = line.toStdString();
+            // auto found = std::find(napis.begin(), napis.end(), counterName.toStdString());
+            // if (found != napis.end())
+            // {
+            //     return words[found - napis.begin() + 2].toInt();
+            // }
         }
     }
     return 0;

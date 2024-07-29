@@ -11,8 +11,8 @@ Global::Global(QObject *parent)
     setColor_text2(QColor(175, 175, 175));
     setColor_btnOn(QColor(13, 239, 66));
     setColor_btnOff(QColor(220, 61, 42));
-    setAppWidth(1200);
-    setAppHeight(700);
+    setAppWidth(1300);
+    setAppHeight(800);
     setAppMinWidth(700);
     setAppMinHeight(500);
     setSelectionBarHeight(55);

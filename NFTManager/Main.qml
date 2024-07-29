@@ -3,6 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import app.Global
 import app.Controller
+import app.IpBlockController
 import QtCharts
 
 Window {
@@ -16,6 +17,8 @@ Window {
     color: Global.color_bg1
     minimumWidth: Global.appMinWidth
     minimumHeight: Global.appMinHeight
+
+    signal ipBarOutOfFocus()
 
     Column {
 
@@ -62,25 +65,7 @@ Window {
                 CustomTabButton {
                     stackLayoutItem: stackLayout
                     selfIndex: 3
-                    name: "Feature4"
-                }
-
-                CustomTabButton {
-                    stackLayoutItem: stackLayout
-                    selfIndex: 4
-                    name: "Feature5"
-                }
-
-                CustomTabButton {
-                    stackLayoutItem: stackLayout
-                    selfIndex: 5
-                    name: "Feature6"
-                }
-
-                CustomTabButton {
-                    stackLayoutItem: stackLayout
-                    selfIndex: 6
-                    name: "Feature7"
+                    name: "Block custom IP"
                 }
             }
 
@@ -288,23 +273,229 @@ Window {
             FeatureWindow { // FOURTH TAB (4)
                 id: feature4
 
-            }
+                Text{
+                    id: titleF4
+                    text: "Block incoming packets from custom IP Address."
+                    font.pixelSize: Global.fontSize5
+                    height: 100
+                    font.bold: true
+                    color: Global.color_text1
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                    elide: Text.ElideRight
+                    anchors {
+                        top: parent.top
+                        left: parent.left
+                        right: parent.right
+                        topMargin: 25
+                        leftMargin: 50
+                        rightMargin: 50
+                        //horizontalCenter: parent.horizontalCenter
+                    }
+                }
 
-            FeatureWindow { // FIFTH TAB (5)
-                id: feature5
+                Item {
+                    anchors {
+                        top: titleF4.bottom
+                        left: parent.left
+                        right: parent.right
+                        bottom: parent.bottom
+                        leftMargin: 100
+                        rightMargin: 100
+                        topMargin: 50
+                        bottomMargin: 50
+                    }
+                    Item {
+                        id: searchBarF4
 
-            }
+                        height: 75
+                        anchors {
+                            left: parent.left
+                            right: parent.right
+                            top: parent.top
 
-            FeatureWindow { // SIXTH TAB (6)
-                id: feature6
+                            leftMargin: 50
+                            rightMargin: 50
+                        }
+                        CustomButton {
+                            id: btnF4
+                            anchors {
+                                left: parent.left
+                                top: parent.top
+                                bottom: parent.bottom
+                            }
 
-            }
+                            width: 150
+                            height: 75
+                            textContent: "Add"
+                            fontSize: Global.fontSize3
+                            textColor: Global.color_text1
+                            idleColor: Global.color_btnOn
+                            hoveredColor: Qt.darker(Global.color_btnOn)
+                            clickedColor: Global.color_bg1 // not working
+                            clickedHoveredColor: Global.color_bg2 // not working
 
-            FeatureWindow { // SEVENTH TAB (7)
-                id: feature7
+                            textBold: true
+                            btnRadius: 15
 
+                            onClicked: {
+                                IpBlockController.addItem(ipBar.text);
+                                ipBarOutOfFocus()
+                                ipBar.text = ""
+                            }
+                        }
+
+                        Rectangle {
+                            id: searchWindowF4
+                            color: Qt.lighter(Global.color_bg1)
+                            radius: 15
+                            anchors {
+                                left: btnF4.right
+                                right: parent.right
+                                bottom: parent.bottom
+                                top: parent.top
+                                leftMargin: 25
+                            }
+
+                            TextInput {
+                                id: ipBar
+
+                                text: ""
+                                color: Global.color_text1
+                                font.pointSize: Global.fontSize3
+                                width: parent.width - 30
+                                font.bold: false
+                                clip: true
+
+
+                                anchors {
+                                    fill: parent
+                                    margins: 15
+                                    verticalCenter: parent.verticalCenter
+                                }
+
+                                onActiveFocusChanged: {
+                                    if (activeFocus) {
+                                        ipBar.selectAll()
+                                    }
+                                }
+                                onAccepted: {
+                                    ipBarOutOfFocus()
+
+                                }
+
+                                Keys.onPressed: (event) => {
+                                                    if (event.key === Qt.Key_Escape)
+                                                        ipBarOutOfFocus()
+                                                }
+                            }
+
+                        }
+                    }
+                    Rectangle {
+                        color: Qt.lighter(Global.color_bg1)
+                        radius: 15
+                        anchors {
+                            top: searchBarF4.bottom
+                            bottom: parent.bottom
+                            left: parent.left
+                            right: parent.right
+                            topMargin: 25
+                            leftMargin: 50
+                            rightMargin: 50
+                        }
+
+
+
+                        ListView {
+                            id: itemsContainerF4
+                            anchors {
+                                fill: parent
+                                margins: 25
+                            }
+                            clip: true
+                            model: IpBlockController
+                            spacing: 5
+
+                            delegate: Item {
+                                id: delegate
+
+                                required property string ipBlockIpAddress
+                                required property string ipBlockId
+
+                                height: 75
+                                anchors {
+                                    left: parent.left
+                                    right: parent.right
+                                }
+
+                                Rectangle {
+                                    id: background
+                                    anchors {
+                                        fill: delegate
+                                    }
+
+                                    radius: 15
+                                    color: Qt.lighter(Global.color_bg2)
+
+                                    Text{
+                                        id: ipName
+                                        text: "Blocked IP Address: " + delegate.ipBlockIpAddress
+                                        font.pixelSize: Global.fontSize3
+                                        font.bold: true
+                                        color: Global.color_text1
+                                        horizontalAlignment: Text.AlignHCenter
+                                        verticalAlignment: Text.AlignVCenter
+                                        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                                        elide: Text.ElideRight
+                                        anchors {
+                                            top: parent.top
+                                            bottom: parent.bottom
+                                            left: parent.left
+                                            leftMargin: 25
+                                            //horizontalCenter: parent.horizontalCenter
+                                        }
+                                    }
+
+                                    CustomButton {
+                                        id: deleteBtnF4
+                                        anchors {
+                                            top: parent.top
+                                            bottom: parent.bottom
+                                            right: parent.right
+                                            margins: 10
+                                        }
+
+
+                                        textContent: "Delete"
+                                        fontSize: Global.fontSize3
+                                        textColor: Global.color_text1
+                                        idleColor: Global.color_btnOff
+                                        hoveredColor: Qt.darker(Global.color_btnOff)
+                                        clickedColor: Global.color_bg1 // not working
+                                        clickedHoveredColor: Global.color_bg2 // not working
+
+                                        textBold: true
+                                        btnRadius: 5
+
+                                        onClicked: {
+                                            IpBlockController.removeItem(delegate.ipBlockIpAddress);
+
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         ////////////////// TABS WINDOWS END //////////////////
+    }
+
+    onIpBarOutOfFocus: {
+        ipBar.focus = false
     }
 }

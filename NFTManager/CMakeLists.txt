@@ -25,6 +25,8 @@ qt_add_qml_module(appNFTManager
         QML_FILES CustomButton.qml
         SOURCES Utilities.h Utilities.cpp
         QML_FILES
+        SOURCES IpBlockInfo.h IpBlockInfo.cpp
+        SOURCES IpBlockController.h IpBlockController.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

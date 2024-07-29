@@ -16,6 +16,8 @@ public:
     static void removeLineContainingFromFile(const std::string& filePath, const std::string& lineToRemove);
     static void removeContentFromFile(const std::string& filePath, const std::string& contentToRemove);
 
+    static bool isIpAddressValid(const QString& input);
+
 };
 
 #endif // UTILITIES_H

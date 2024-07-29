@@ -11,7 +11,7 @@ Controller::Controller(QObject *parent)
 {
     //setListening(false);
     //Utilities::resetNFTablesConfigFileToDefault();
-    std::ifstream inputFile("isBlockedAllInPackets.shitloadofdata", std::ios::in);
+    //std::ifstream inputFile("isBlockedAllInPackets.shitloadofdata", std::ios::in);
     //setBlockedAllInPackets()
 }
 
@@ -38,9 +38,6 @@ void Controller::updateTcpUdpCount()
         connect(timer, &QTimer::timeout, this, QOverload<>::of(&Controller::getTcpUdpCount));
         timer->setSingleShot(true);
         timer->start(10000);
-    }
-    else{
-        qDebug() << "Module is already listening!";
     }
 }
 

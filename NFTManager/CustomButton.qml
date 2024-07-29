@@ -1,5 +1,6 @@
 import QtQuick
 import app.Global
+import app.IpBlockController
 
 Rectangle {
     id: root
