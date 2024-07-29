@@ -7,6 +7,8 @@
 #include <QTimer>
 #include <string>
 
+std::string const NFTables::NFTConfigPath = "/etc/nftables.conf";
+
 NFTables::NFTables() {}
 
 
@@ -64,6 +66,12 @@ void NFTables::cleanupTcpUdpNFTables()
     for (const QString &cmd : commands) {
         system(cmd.toStdString().c_str());
     }
+}
+
+void NFTables::reloadNFT()
+{
+    std::string command = "sudo nft -f " + NFTConfigPath;
+    system(command.c_str());
 }
 
 int NFTables::extractCounterValue(const QString &output, const QString &counterName)

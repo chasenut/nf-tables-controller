@@ -14,9 +14,11 @@ class NFTables
 {
 public:
     NFTables();
+    static const std::string NFTConfigPath;
 
     static void setupTcpUdpNFTables();
     static void cleanupTcpUdpNFTables();
+    static void reloadNFT();
 
 public slots:
     static TcpUdpCount getTcpUdpCounters();

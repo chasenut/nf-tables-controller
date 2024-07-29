@@ -4,12 +4,14 @@ import app.Global
 Rectangle {
     id: root
 
-    property string textContent: "placehoder"
+    property string textContent: ""
+    property string textContentWhenDisabled: ""
     property int fontSize: Global.fontSize2
     property color textColor: Global.color_text1
     required property color idleColor
     required property color hoveredColor
     required property color clickedColor
+    required property color clickedHoveredColor
     property bool textBold: false
     property int btnRadius: 0
 
@@ -22,11 +24,11 @@ Rectangle {
     implicitWidth: 100
     implicitHeight: 50
     //color: btnDisabledWhen ? clickedColor : (mouseArea.containsPress ? clickedColor : (mouseArea.containsMouse ? hoveredColor : idleColor))
-    color: if (btnDisabledWhen){
+    color: if (btnDisabledWhen && mouseArea.containsMouse) { // Button activated and mouse hovered
+               return clickedHoveredColor
+           } else if (btnDisabledWhen) {
                return clickedColor
-           } else if (mouseArea.containsPress) {
-               return clickedColor
-           } else if (mouseArea.containsMouse) {
+           } else if (!btnDisabledWhen && mouseArea.containsMouse) {
                return hoveredColor
            } else {
                return idleColor
@@ -34,7 +36,12 @@ Rectangle {
 
 
     Text {
-        text: textContent
+        text: if (btnDisabledWhen){
+                  return textContentWhenDisabled
+              } else {
+                  return textContent
+              }
+
         font.pixelSize: fontSize
         font.bold: textBold
         color: textColor

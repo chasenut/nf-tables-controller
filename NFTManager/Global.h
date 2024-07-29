@@ -14,6 +14,8 @@ class Global : public QObject
     Q_PROPERTY(QColor color_bg2 READ color_bg2 WRITE setColor_bg2 NOTIFY color_bg2Changed FINAL)
     Q_PROPERTY(QColor color_text1 READ color_text1 WRITE setColor_text1 NOTIFY color_text1Changed FINAL)
     Q_PROPERTY(QColor color_text2 READ color_text2 WRITE setColor_text2 NOTIFY color_text2Changed FINAL)
+    Q_PROPERTY(QColor color_btnOn READ color_btnOn WRITE setColor_btnOn NOTIFY color_btnOnChanged FINAL)
+    Q_PROPERTY(QColor color_btnOff READ color_btnOff WRITE setColor_btnOff NOTIFY color_btnOffChanged FINAL)
 
     Q_PROPERTY(int appWidth READ appWidth WRITE setAppWidth NOTIFY appWidthChanged FINAL)
     Q_PROPERTY(int appHeight READ appHeight WRITE setAppHeight NOTIFY appHeightChanged FINAL)
@@ -82,6 +84,12 @@ public:
     int fontSize5() const;
     void setFontSize5(int newFontSize5);
 
+    QColor color_btnOff() const;
+    void setColor_btnOff(const QColor &newColor_btnOff);
+
+    QColor color_btnOn() const;
+    void setColor_btnOn(const QColor &newColor_btnOn);
+
 signals:
     void color_bg1Changed();
 
@@ -117,6 +125,10 @@ signals:
 
     void fontSize5Changed();
 
+    void color_btnOffChanged();
+
+    void color_btnOnChanged();
+
 private:
     QColor m_color_bg1;
     QColor m_color_bg2;
@@ -135,6 +147,8 @@ private:
     int m_fontSize3;
     int m_fontSize4;
     int m_fontSize5;
+    QColor m_color_btnOff;
+    QColor m_color_btnOn;
 };
 
 #endif // GLOBAL_H

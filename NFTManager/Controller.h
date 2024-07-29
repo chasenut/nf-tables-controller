@@ -10,6 +10,7 @@ class Controller : public QObject
     Q_PROPERTY(int inTcpCount READ inTcpCount WRITE setInTcpCount NOTIFY inTcpCountChanged FINAL)
     Q_PROPERTY(int inUdpCount READ inUdpCount WRITE setInUdpCount NOTIFY inUdpCountChanged FINAL)
     Q_PROPERTY(bool listening READ listening WRITE setListening NOTIFY listeningChanged FINAL)
+    Q_PROPERTY(bool blockedAllInPackets READ blockedAllInPackets WRITE setBlockedAllInPackets NOTIFY blockedAllInPacketsChanged FINAL)
 
 public:
     explicit Controller(QObject *parent = nullptr);
@@ -24,10 +25,15 @@ public:
     bool listening() const;
     void setListening(bool newListening);
 
+    bool blockedAllInPackets() const;
+    void setBlockedAllInPackets(bool newBlockedAllInPackets);
+
 public slots:
     void debug();
     void updateTcpUdpCount();
     void getTcpUdpCount();
+    void toogleBlockAllPackets();
+    void resetNFT(const bool& hard = false);
 
 
 signals:
@@ -38,11 +44,14 @@ signals:
 
     void listeningChanged();
 
+    void blockedAllInPacketsChanged();
+
 private:
 
     int m_inUdpCount = 0;
     int m_inTcpCount = 0;
-    bool m_listening;
+    bool m_listening = false;
+    bool m_blockedAllInPackets = false;
 };
 
 #endif // CONTROLLER_H

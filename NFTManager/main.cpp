@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 {
     //QGuiApplication app(argc, argv);
     QApplication app(argc, argv);
+    system("sudo systemctl enable nftables"); // enable nftables
 
     Global *global = new Global(&app);
     Controller *controller = new Controller(&app);

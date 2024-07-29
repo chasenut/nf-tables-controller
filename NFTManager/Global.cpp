@@ -9,6 +9,8 @@ Global::Global(QObject *parent)
     setColor_bg2(QColor(30, 30, 30));
     setColor_text1(QColor(255, 255, 255));
     setColor_text2(QColor(175, 175, 175));
+    setColor_btnOn(QColor(13, 239, 66));
+    setColor_btnOff(QColor(220, 61, 42));
     setAppWidth(1200);
     setAppHeight(700);
     setAppMinWidth(700);
@@ -241,4 +243,30 @@ void Global::setFontSize5(int newFontSize5)
         return;
     m_fontSize5 = newFontSize5;
     emit fontSize5Changed();
+}
+
+QColor Global::color_btnOff() const
+{
+    return m_color_btnOff;
+}
+
+void Global::setColor_btnOff(const QColor &newColor_btnOff)
+{
+    if (m_color_btnOff == newColor_btnOff)
+        return;
+    m_color_btnOff = newColor_btnOff;
+    emit color_btnOffChanged();
+}
+
+QColor Global::color_btnOn() const
+{
+    return m_color_btnOn;
+}
+
+void Global::setColor_btnOn(const QColor &newColor_btnOn)
+{
+    if (m_color_btnOn == newColor_btnOn)
+        return;
+    m_color_btnOn = newColor_btnOn;
+    emit color_btnOnChanged();
 }

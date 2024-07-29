@@ -50,13 +50,13 @@ Window {
                 CustomTabButton {
                     stackLayoutItem: stackLayout
                     selfIndex: 1
-                    name: "Feature2"
+                    name: "Block all incoming packets"
                 }
 
                 CustomTabButton {
                     stackLayoutItem: stackLayout
                     selfIndex: 2
-                    name: "Feature3"
+                    name: "Reset NFTables"
                 }
 
                 CustomTabButton {
@@ -100,7 +100,7 @@ Window {
                 id: feature1
 
                 Text{
-                    id: title
+                    id: titleF1
                     text: "TCP and UDP packets listener, counts incoming packets in certain period of time."
                     font.pixelSize: Global.fontSize5
                     height: 100
@@ -122,34 +122,45 @@ Window {
                 }
                 Item {
                     anchors {
-                        top: title.bottom
+                        top: titleF1.bottom
                         left: parent.left
                         right: parent.right
                         bottom: parent.bottom
                     }
-
-                    CustomButton{
-                        id: listenBtn
-                        width: 300
-                        height: 150
+                    Item {
                         anchors {
                             left: parent.left
-                            verticalCenter: parent.verticalCenter
-                            leftMargin: 50
+                            right: parent.horizontalCenter
+                            top: parent.top
+                            bottom: parent.bottom
                         }
-                        textContent: "Listen for 10 seconds"
-                        textBold: true
-                        fontSize: Global.fontSize3
-                        btnRadius: 25
-                        idleColor: Global.color_theme2
-                        hoveredColor: Global.color_theme1
-                        clickedColor: Global.color_bg2
-                        btnDisabledWhen: Controller.listening
-                        onClicked: Controller.updateTcpUdpCount()
+
+                        CustomButton{
+                            id: listenBtnF1
+                            width: 300
+                            height: 150
+                            anchors {
+                                horizontalCenter: parent.horizontalCenter
+                                verticalCenter: parent.verticalCenter
+
+                            }
+                            textContent: "Listen for 10 seconds"
+                            textContentWhenDisabled: "Listening..."
+                            textBold: true
+                            fontSize: Global.fontSize3
+                            btnRadius: 25
+                            idleColor: Global.color_theme2
+                            hoveredColor: Global.color_theme1
+                            //clickedColor: Global.color_bg2
+                            clickedColor: Global.color_bg2
+                            clickedHoveredColor: Global.color_bg2
+                            btnDisabledWhen: Controller.listening
+                            onClicked: Controller.updateTcpUdpCount()
+                        }
                     }
 
                     ChartView {
-                        id: chart
+                        id: chartF1
                         title: "Recorded incoming packets (TCP & UDP)"
                         legend.alignment: Qt.AlignBottom
                         antialiasing: true
@@ -164,9 +175,9 @@ Window {
                         }
 
                         PieSeries {
-                            id: pieSeries
-                            PieSlice { label: "TCP"; value: Controller.inTcpCount }
-                            PieSlice { label: "UDP"; value: Controller.inUdpCount }
+                            id: pieSeriesF1
+                            PieSlice { label: "TCP: " + Controller.inTcpCount; value: Controller.inTcpCount }
+                            PieSlice { label: "UDP: " + Controller.inUdpCount; value: Controller.inUdpCount }
                         }
                     }
                 }
@@ -175,13 +186,104 @@ Window {
 
             FeatureWindow { // SECOND TAB (2)
                 id: feature2
+                Text{
+                    id: titleF2
+                    text: "Block all incoming packets (inet)."
+                    font.pixelSize: Global.fontSize5
+                    height: 100
+                    font.bold: true
+                    color: Global.color_text1
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                    elide: Text.ElideRight
+                    anchors {
+                        top: parent.top
+                        left: parent.left
+                        right: parent.right
+                        topMargin: 25
+                        leftMargin: 50
+                        rightMargin: 50
+                        //horizontalCenter: parent.horizontalCenter
+                    }
+                }
 
+                CustomButton {
+                    id: btnF2
+                    anchors {
+                        top: titleF2.bottom
+                        bottom: parent.bottom
+                        left: parent.left
+                        right: parent.right
+                        margins: 100
+                    }
+
+                    textContent: "Drop all incoming packets"
+                    textContentWhenDisabled: "Accept all incoming packets"
+                    fontSize: Global.fontSize5
+                    textColor: Global.color_text1
+                    idleColor: Global.color_btnOn
+                    hoveredColor: Qt.darker(Global.color_btnOn)
+                    clickedColor: Global.color_btnOff
+                    clickedHoveredColor: Qt.darker(Global.color_btnOff)
+                    textBold: true
+                    btnRadius: 25
+
+                    btnDisabledWhen: Controller.blockedAllInPackets
+
+                    onClicked: Controller.toogleBlockAllPackets()
+                }
             }
 
             FeatureWindow { // THIRD TAB (3)
                 id: feature3
+                Text{
+                    id: titleF3
+                    text: "Reset NFTables (/etc/nftables.conf) to default configuration."
+                    font.pixelSize: Global.fontSize5
+                    height: 100
+                    font.bold: true
+                    color: Global.color_text1
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                    elide: Text.ElideRight
+                    anchors {
+                        top: parent.top
+                        left: parent.left
+                        right: parent.right
+                        topMargin: 25
+                        leftMargin: 50
+                        rightMargin: 50
+                        //horizontalCenter: parent.horizontalCenter
+                    }
+                }
 
+                CustomButton {
+                    id: btnF3
+                    anchors {
+                        top: titleF3.bottom
+                        bottom: parent.bottom
+                        left: parent.left
+                        right: parent.right
+                        margins: 100
+                    }
+
+                    textContent: "Reset"
+                    fontSize: Global.fontSize5
+                    textColor: Global.color_text1
+                    idleColor: Global.color_theme2
+                    hoveredColor: Global.color_theme1
+                    clickedColor: Global.color_bg1 // not working
+                    clickedHoveredColor: Global.color_bg2 // not working
+
+                    textBold: true
+                    btnRadius: 25
+
+                    onClicked: Controller.resetNFT()
+                }
             }
+
 
             FeatureWindow { // FOURTH TAB (4)
                 id: feature4
