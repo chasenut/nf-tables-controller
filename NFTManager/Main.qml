@@ -482,7 +482,6 @@ Window {
                                         onClicked: {
                                             IpBlockController.removeItem(delegate.ipBlockIpAddress);
 
-
                                         }
                                     }
                                 }
