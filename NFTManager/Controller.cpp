@@ -4,12 +4,15 @@
 #include "NFTables.h"
 #include "Utilities.h"
 #include <QStringList>
+#include <fstream>
 
 Controller::Controller(QObject *parent)
     : QObject{parent}
 {
     //setListening(false);
     //Utilities::resetNFTablesConfigFileToDefault();
+    std::ifstream inputFile("isBlockedAllInPackets.shitloadofdata", std::ios::in);
+    //setBlockedAllInPackets()
 }
 
 Controller::~Controller()
@@ -54,10 +57,10 @@ void Controller::getTcpUdpCount()
 void Controller::toogleBlockAllPackets()
 {
     QStringList nftBlockAllContent = {
-        //"table inet block_all {;   chain input {;       type filter hook input priority 0; policy drop; }; }"
-        "table inet block_all {;   chain input {;       type filter hook input priority 0; policy drop;       iif lo accept; }; }"
+        //"table inet block_all {;   chain input {;       type filter hook input priority 0; policy drop; }; }" // original one, withour accepting kernel's packets
+        "table inet block_all {;   chain input {;       type filter hook input priority -10; policy drop;       iif lo accept; }; }"
+        /// NFTables has strange syntax and to make it one-line it has to look ugly af (I guess ';' = '\n')
     };
-    //std::string nftBlockAll = "table inet block_all { chain input { type filter hook input priority 0; policy drop; } }";
 
     if (!m_blockedAllInPackets)
     {
@@ -65,7 +68,6 @@ void Controller::toogleBlockAllPackets()
         {
             Utilities::addLineToFile(NFTables::NFTConfigPath, cmd.toStdString());
         }
-        //Utilities::addLineToFile(NFTables::NFTConfigPath, nftBlockAll);
     }
     else
     {
@@ -73,7 +75,6 @@ void Controller::toogleBlockAllPackets()
         {
             Utilities::removeLineContainingFromFile(NFTables::NFTConfigPath, cmd.toStdString());
         }
-        //Utilities::removeLineContainingFromFile(NFTables::NFTConfigPath, nftBlockAll);
     }
 
     NFTables::reloadNFT();
@@ -137,5 +138,10 @@ void Controller::setBlockedAllInPackets(bool newBlockedAllInPackets)
     if (m_blockedAllInPackets == newBlockedAllInPackets)
         return;
     m_blockedAllInPackets = newBlockedAllInPackets;
+
+    std::ofstream outputFile("isBlockedAllInPackets.shitloadofdata", std::ios::trunc);
+    outputFile << m_blockedAllInPackets;
+    outputFile.close();
+
     emit blockedAllInPacketsChanged();
 }
