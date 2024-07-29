@@ -27,3 +27,5 @@ If anything goes wrong, you can reset NFTables to default configuration.
 ### Block cutom IP Address.
 
 Block all incoming packets from specified custom IP Address (you need to provide a valid one, it is not supporting IP Address validation).
+
+![blockcustom_preview](./blockcustom_preview.png)
