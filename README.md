@@ -1,7 +1,7 @@
-# NFT Manager
+# nf-tables controller
 
-Written in C++ nad Qt (6.5.3) QML using Ubuntu's NFTables as a network filer.
-NFT Manager is a very simple and basic tool, project made for learning and as a mini challange. Nothing crazy, basic functions, don't be scared when you get disconnected from any other services while using it, it block incoming packets.
+Written in C++ nad Qt (6.5.3) QML using Linux's NFTables as a network filer.
+NFT Manager is a basic tool, project made for learning and as a mini challange. Nothing crazy, basic functions, don't be scared when you get disconnected from any other services while using it, it blocks incoming packets.
 
 
 # Build and run
